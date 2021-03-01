@@ -1,3 +1,21 @@
+* {
+  font-family: 'Oxygen', sans-serif;
+}
+
+h1,h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
 .App {
   text-align: center;
 }
@@ -40,7 +58,114 @@
 main {
   display: flex;
   margin: 0 auto;
-  width: 600px;
-  align-items: center;
+  width: 700px;
+  align-items: flex-start;
   justify-content: space-between;
+}
+
+.field > .input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  border-bottom: solid 1px #BEBEBE;
+  height: 40px;
+  margin-bottom: 20px;
+  width: 250px;
+  letter-spacing: .1em;
+  font-size: 1em;
+  color: #BA55D3;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #BA55D3;
+}
+
+.label {
+  font-size: .8em;
+  letter-spacing: .12em;
+}
+
+button {
+  border-radius: 50px;
+  display: block;
+  height: 35px;
+  width: 120px;
+  margin-top: 20px;
+  border: none;
+  background: #BA55D3;
+  color: white;
+  cursor: pointer;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+button:disabled {
+  border: none;
+  background: #BEBEBE;
+  color: white;
+  font-size: .9em;
+  cursor: no-drop;
+}
+
+.signUpForm,.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  height: 520px;
+  border-left: 1px solid #BEBEBE;
+}
+
+.submitError,.error {
+  text-align: left;
+  color: red;
+  letter-spacing: .1em;
+  font-size: .8em;
+}
+
+.checkEmail {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goBack {
+  display: flex;
+  width: 190px;
+  height: 50px;
+  border: 1px solid #BA55D3;
+  border-radius: 50px;
+  padding: 0 15px 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emailStr {
+  color: #BA55D3;
 }

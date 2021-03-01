@@ -11,9 +11,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="header">Form</header>
+        <h1>Form</h1>
         <main>
           <SignUpSection />
+          <div className="line" />
           <LoginSection />
         </main>        
       </div>

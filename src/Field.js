@@ -6,14 +6,16 @@ class Field extends Component {
         const onChange = this.props.onChange;
 
         return(
-            <div className="Field">
-                <div className="FieldError">{error}</div>
-                <div className="FieldLabel">{label}</div>
-                <input className="FieldInput"
-                 type={type}
-                 name={name}
-                 value={value}
-                 onChange={(e) => onChange(e)} />
+            <div className="field">
+                <div className="error">{error}</div>
+                <div className="input">
+                    <div className="label">{label}</div>
+                    <input 
+                    type={type}
+                    name={name}
+                    value={value}
+                    onChange={(e) => onChange(e)} />
+                </div>
             </div>
         );
     }

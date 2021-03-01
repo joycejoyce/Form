@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+import styled from "@emotion/styled";
+import { ReactComponent as BackImg } from './assets/arrow-circle-left-solid.svg';
+
+const BackBtn = styled(BackImg)`
+    width: 30px;
+    color: #BA55D3;
+`;
 
 class CheckEmail extends Component {
     handleClick = (e) => {
@@ -10,8 +17,14 @@ class CheckEmail extends Component {
         const { email } = this.props.location.state;
         return (
             <div className="checkEmail">
-                <div className="message">A verification link has been sent to {email}</div>
-                <button className="goBackBtn" onClick={(e) => this.handleClick(e)}>Back to sign up page</button>
+                <div>
+                    <div className="message">A verification link has been sent to</div>
+                    <div className="emailStr">{email}</div>
+                </div>
+                <div className="goBack" onClick={(e) => this.handleClick(e)}>
+                    <BackBtn />
+                    <div className="text">Back to sign up page</div>
+                </div>
             </div>
         )
     }
