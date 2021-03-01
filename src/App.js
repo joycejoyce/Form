@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import SignUpSection from "./SignUpSection.js";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Test1
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+Amplify.configure(awsconfig);
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="header">Form</header>
+        <SignUpSection />
+      </div>
+    );
+  }
 }
 
 export default App;
