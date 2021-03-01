@@ -52,7 +52,8 @@ class SignUpForm extends Component {
         const { name, value } = field;
         const fields = this.state.fields;
         fields[name] = { ...this.state.fields[name], [prop]: value };
-        await this.setState({ fields });this.validate(name, value);
+        await this.setState({ fields });
+        this.validate(name, value);
     }
 
     validate = (name, value) => {
